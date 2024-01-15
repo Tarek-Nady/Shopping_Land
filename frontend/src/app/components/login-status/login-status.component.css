@@ -1,40 +1,35 @@
+/* Styles for buttons related to security actions like login and logout */
 .security-btn{
-    position:relative;
-    right: 2px;
-    min-width:60px;
-    color:#fff;
-    border:6px solid #205b8d;
-    -webkit-border-radius:5px;
-    -moz-border-radius:5px;
-    border-radius:  70%;
-    background:#205b8d
+    position: relative; /* Elements are positioned relative to their normal position */
+    right: 2px; /* Moves the element 2 pixels to the left */
+    min-width: 60px; /* Minimum width set to 60 pixels */
+    color: #fff; /* Text color set to white */
+    border: 6px solid #205b8d; /* Solid border with 6 pixels thickness and color #205b8d */
+    -webkit-border-radius: 5px; /* Border radius for WebKit browsers */
+    -moz-border-radius: 5px; /* Border radius for Mozilla browsers */
+    border-radius: 70%; /* Border radius for all browsers, creating a rounded effect */
+    background: #205b8d /* Background color set to #205b8d */
 }
 
-
-
+/* Styling for the header section displaying login status */
 .login-status-header{
-    display:-webkit-box;
-    display:-webkit-flex;
-    display:-moz-box;
-    display:-ms-flexbox;
-    display:flex
+    display: -webkit-box; /* Display as a flexible box for WebKit browsers */
+    display: -webkit-flex; /* Display as flex container for WebKit browsers */
+    display: -moz-box; /* Display as a box for Mozilla browsers */
+    display: -ms-flexbox; /* Display as a flexbox for MS browsers */
+    display: flex; /* Display as a flex container for all browsers */
 }
 
-
-
+/* Styling for the section that shows user information when logged in */
 .login-status-user-info{
-    line-height:23px;
-    border:3px ;
-    padding:0 17px;
-    -webkit-border-radius:3px;
-    -moz-border-radius:3px;
-    border-radius:3px;
-    -webkit-transition:all .5s ease;
-    -o-transition:all .5s ease;
-    -moz-transition:all .5s ease;
-    transition:all .5s ease
+    line-height: 23px; /* Sets the height of lines to 23 pixels */
+    border: 3px; /* Sets a border of 3 pixels thickness */
+    padding: 0 17px; /* Padding: 0 pixels on top and bottom, 17 pixels on left and right */
+    -webkit-border-radius: 3px; /* Border radius for WebKit browsers */
+    -moz-border-radius: 3px; /* Border radius for Mozilla browsers */
+    border-radius: 3px; /* Border radius for all browsers */
+    -webkit-transition: all .5s ease; /* Transition effect for all properties over 0.5 seconds for WebKit browsers */
+    -o-transition: all .5s ease; /* Transition effect for all properties over 0.5 seconds for Opera browsers */
+    -moz-transition: all .5s ease; /* Transition effect for all properties over 0.5 seconds for Mozilla browsers */
+    transition: all .5s ease; /* Transition effect for all properties over 0.5 seconds for all browsers */
 }
-
-
-
-
