@@ -1,5 +1,5 @@
 import { CartItem } from "./cart-item";
-
+//entity with some properties
 export class OrderItem {
     imageUrl: string = "";
     unitPrice: number = 0;
