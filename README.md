@@ -129,6 +129,8 @@ for application security we okta platform.
     <img src="images/stripe2.png" alt="login" style="width:100%;">
 </figure>
 
+![Language](https://img.shields.io/badge/Language-Java-orange)
+
 ## FAQ
 - Feel free to ask any questions
 
