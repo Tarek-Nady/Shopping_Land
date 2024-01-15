@@ -20,23 +20,21 @@ import { environment } from 'src/environments/environment';
 })
 export class CheckoutComponent implements OnInit {
 
-  checkoutFormGroup: FormGroup | undefined;
-  totalPrice: number = 0;
-  totalQuantity: number = 0;
-
-  creditCardYears: number[] = [];
-  creditCardMonths: number[] = [];
-
-  countries: Country[] | undefined;
-  shippingAddressStates: State[] | undefined;
-  billingAddressStates: State[] | undefined;
-  storage: Storage = sessionStorage;
-  // stripe: any;
-  stripe = Stripe(environment.StripePublicKey);
-  paymentInfo: PaymentInfo = new PaymentInfo();
-  cardElement: any;
-  displayError: any = "";
-  isDisabled: Boolean = false
+  // Component properties.
+  checkoutFormGroup: FormGroup | undefined; // FormGroup for the checkout form.
+  totalPrice: number = 0; // Total price of the items in the cart.
+  totalQuantity: number = 0; // Total quantity of items in the cart.
+  creditCardYears: number[] = []; // Array for credit card expiration years.
+  creditCardMonths: number[] = []; // Array for credit card expiration months.
+  countries: Country[] | undefined; // Array of countries for dropdown.
+  shippingAddressStates: State[] | undefined; // States for the shipping address dropdown.
+  billingAddressStates: State[] | undefined; // States for the billing address dropdown.
+  storage: Storage = sessionStorage; // Session storage for persistence.
+  stripe = Stripe(environment.StripePublicKey); // Stripe payment gateway integration.
+  paymentInfo: PaymentInfo = new PaymentInfo(); // Payment information structure.
+  cardElement: any; // Element for the Stripe card input.
+  displayError: any = ""; // To display payment errors.
+  isDisabled: Boolean = false; // To disable the submit button after submission.
   constructor(private formBuilder: FormBuilder, private dropFormservice: DropFormService, private cartService: CartService, private checkoutService: CheckoutService, private router: Router) { }
 
   ngOnInit(): void {
