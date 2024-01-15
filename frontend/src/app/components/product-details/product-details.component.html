@@ -1,0 +1,33 @@
+<!-- Detail Section -->
+<!-- This section displays detailed information about a specific product. -->
+<div class="detail-section">
+    <!-- Fluid container for responsive layout -->
+    <div class="container-fluid">
+        <!-- Product Image -->
+        <!-- The '?' operator is used for safe navigation, in case 'product' is undefined -->
+        <img src="{{ product?.imageUrl }}" class="detail-img">
+
+        <!-- Product Name -->
+        <h3>{{ product?.name }}</h3>
+
+        <!-- Product Price -->
+        <!-- The currency pipe formats the price as currency -->
+        <div>{{ product?.unitPrice | currency:'USD':'symbol':'1.2-2' }}</div>
+
+        <!-- Add to Cart Button -->
+        <!-- Clicking this button triggers the addToCart method -->
+        <button (click)="addToCart()" class="btn btn-primary btn-sm">Add to Cart</button>
+
+        <!-- Divider -->
+        <hr>
+
+        <!-- Product Description Heading -->
+        <h4>Description</h4>
+        <!-- Product Description -->
+        <p>{{ product?.description }}</p>
+
+        <!-- Back to Product List Link -->
+        <!-- This link navigates back to the product list view -->
+        <a routerLink="/products" class="btn btn-primary">Back to Product List</a>
+    </div>
+</div>

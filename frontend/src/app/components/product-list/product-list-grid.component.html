@@ -1,0 +1,72 @@
+<!-- Main container for content -->
+<div class="main-content">
+    <!-- Section content with padding -->
+    <div class="section-content section-content-p30">
+        <!-- Fluid container for responsive layout -->
+        <div class="container-fluid">
+            <!-- Row for product grid -->
+            <div class="row">
+                <!-- Product item iteration -->
+                <!-- *ngFor directive iterates over the products array -->
+                <div *ngFor="let tempProduct of products" class="col-md-3">
+                    <!-- Individual product box -->
+                    <div class="product-box">
+                        <!-- Product link with dynamic route -->
+                        <a routerLink="/products/{{ tempProduct.id }}">
+                            <!-- Product image -->
+                            <img src="{{ tempProduct.imageUrl }}" class="img-responsive">
+                            <!-- Product name -->
+                            <h1>{{ tempProduct.name }}</h1>
+                        </a>
+
+                        <!-- Product price with currency formatting -->
+                        <div>{{ tempProduct.unitPrice | currency:'USD':'symbol':'1.2-2' }}</div>
+                        <!-- Add to cart button -->
+                        <button type="button" (click)="addToCart(tempProduct)" class="btn btn-primary btn-sm">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Conditionally display if no products are found -->
+                <div *ngIf="products.length == 0" class="alert alert-warning col-md-12" role="alert">
+                    No products found
+                </div>
+            </div>
+            <!-- Pagination footer -->
+            <div class="footer-pagination">
+                <div class="row">
+                    <div class="col md-6">
+                        <div class="col md-6">
+                            <div class="row">
+                                <!-- Pagination control -->
+                                <div class="col-md-9" style="padding-left: 30%">
+                                    <!-- Angular Bootstrap pagination component -->
+                                    <ngb-pagination
+                                     [(page)]="thePageNumber"
+                                     [pageSize]="thePageSize"
+                                     [collectionSize]="theTotalElements"
+                                     [maxSize]="5"
+                                     [boundaryLinks]="true"
+                                        (pageChange)="listProducts()"
+                                    >
+                                    </ngb-pagination>
+                                </div>
+                                <!-- Page size selection -->
+                                <div class="col-md-3 mt-2" style="text-align: right;">
+                                    <span class="mr-2">Page Size</span>
+                                    <!-- Dropdown for selecting page size -->
+                                    <select (change)="updatePageSize($event.target.value)">
+                                        <option>2</option>
+                                        <option selected="true">5</option>
+                                        <option>10</option>
+                                        <option>20</option>
+                                        <option>50</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

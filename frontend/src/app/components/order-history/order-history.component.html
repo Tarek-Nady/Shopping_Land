@@ -1,0 +1,43 @@
+<!-- Main Content -->
+<!-- This section displays the order history of a user. -->
+<div class="main-content">
+    <!-- Section Content with Padding -->
+    <div class="section-content section-content-p30">
+        <!-- Fluid Container for Responsive Layout -->
+        <div class="container-fluid">
+            <!-- Heading for the Order History Section -->
+            <h3>Your Orders</h3>
+
+            <!-- Conditional Display for Order History Table -->
+            <!-- The *ngIf directive checks if there are any orders in the order history list. -->
+            <div *ngIf="orderHistoryList.length > 0">
+                <!-- Table for Displaying Orders -->
+                <table class="table table-bordered">
+                    <tbody>
+                        <!-- Table Headers -->
+                        <tr>
+                            <th width="20%">Order Tracking Number</th>
+                            <th width="10%">Total Price</th>
+                            <th width="10%">Total Quantity</th>
+                            <th width="10%">Date Created</th>
+                        </tr>
+                        <!-- Iterating Over Each Order in Order History -->
+                        <!-- The *ngFor directive iterates over 'orderHistoryList'. -->
+                        <tr *ngFor="let tempOrderHistory of orderHistoryList">
+                            <!-- Displaying Order Details -->
+                            <td>{{ tempOrderHistory.orderTrackingNumber }}</td>
+                            <td>{{ tempOrderHistory.totalPrice | currency:'USD' }}</td>
+                        <td>{{ tempOrderHistory.totalQuantity }}</td>
+                        <td>{{ tempOrderHistory.dateCreated | date:'medium' }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Conditional Display for No Orders Message -->
+        <!-- The *ngIf directive checks if the order history list is empty. -->
+        <div *ngIf="orderHistoryList.length == 0" class="alert alert-info" role="alert">
+            You have no orders yet.
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<!-- Search Form -->
+<!-- This form provides a user interface for product search. -->
+<form class="form-header">
+  <!-- Input field for search query -->
+  <!-- The #searchInput is a template reference variable to access the input value. -->
+  <input #searchInput class="au-input au-input-xl" type="text" placeholder="Search for products ..."
+    (keyup.enter)="doSearch(searchInput.value)" />
+  <!-- Search Button -->
+  <!-- Clicking this button triggers the doSearch method with the current value of the input field. -->
+  <button class="au-btn-submit" (click)="doSearch(searchInput.value)">
+    <!-- Icon for the search button -->
+    <i class="fa fa-search" aria-hidden="true"></i>
+  </button>
+</form>

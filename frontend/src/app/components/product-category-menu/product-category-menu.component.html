@@ -1,0 +1,18 @@
+<!-- Menu Sidebar Content -->
+<!-- This section contains the navigation sidebar for product categories. -->
+<div class="menu-sidebar-content js-scrollbar1">
+    <!-- Navigation Bar for Sidebar -->
+    <nav class="navbar-sidebar">
+        <!-- List of Product Categories -->
+        <!-- The *ngFor directive iterates over the 'productCategories' array. -->
+        <ul class="list-unstyled navbar-list">
+            <li *ngFor="let tempProductCategory of productCategories">
+                <!-- Link to each product category -->
+                <!-- 'routerLink' dynamically creates a route to each category. -->
+                <a routerLink="/category/{{tempProductCategory.id}}" routerLinkActive="active-link">
+                    {{tempProductCategory.categoryName}}
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
