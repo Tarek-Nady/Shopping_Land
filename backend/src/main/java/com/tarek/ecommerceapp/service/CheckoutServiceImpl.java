@@ -17,12 +17,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.*;
-
+// Marks the class as a service component in Spring
 @Service
 public class CheckoutServiceImpl implements CheckoutService {
 
     private CustomerRepository customerRepository;
 
+    // Constructor to inject CustomerRepository and Stripe's secret key
     @Autowired
     public CheckoutServiceImpl(CustomerRepository customerRepository, @Value("${stripe.key.secret}") String secretKey) {
         this.customerRepository = customerRepository;

@@ -1,3 +1,4 @@
+//entity with some properties
 export class Product {
     constructor(
         public id: string,

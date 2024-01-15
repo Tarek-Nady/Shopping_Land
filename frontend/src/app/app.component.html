@@ -1,49 +1,51 @@
+<!-- Wrapper for the entire page -->
 <div class="page-wrapper">
 
-  <!-- MENU SIDEBAR-->
+  <!-- Side navigation menu, visible only on larger screens -->
   <aside class="menu-sidebar d-none d-lg-block">
     <div class="logo">
+      <!-- RouterLink used for navigation to the products page -->
       <a routerLink="/products">
         <img src="assets/images/favicon.png" alt="ecommerce" class="img-responsive">
       </a>
     </div>
 
-
+    <!-- Product category menu component -->
     <app-product-category-menu></app-product-category-menu>
-    
-    
-   
   </aside>
-  <!-- END MENU SIDEBAR-->
+  <!-- End of side navigation menu -->
+
+  <!-- Main container for content -->
   <div class="page-container">
-    <!-- HEADER DESKTOP-->
+    <!-- Header section for desktop -->
     <header class="header-desktop">
       <div class="section-content section-content-p30">
         <div class="container-fluid">
           <div class="header-wrap">
-            
+            <!-- Search component -->
             <app-search></app-search>
             
+            <!-- Login status component -->
             <app-login-status></app-login-status>
 
+            <!-- Cart status component -->
             <app-cart-status></app-cart-status>
           </div>
-          <div class="account-wrap"></div>
         </div>
       </div>
     </header>
-    <!-- END HEADER DESKTOP-->
+    <!-- End of header section -->
 
-    <!-- MAIN CONTENT-->
+    <!-- Main content area where router-outlet will display routed components -->
     <router-outlet></router-outlet>
   </div>
 </div>
-    <footer>
-      <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">Help</a></li>
-      </ul>
-    </footer>
- 
-    
+
+<!-- Footer section with links -->
+<footer>
+  <ul>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Contact Us</a></li>
+    <li><a href="#">Help</a></li>
+  </ul>
+</footer>

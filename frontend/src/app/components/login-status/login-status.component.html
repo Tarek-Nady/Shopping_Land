@@ -1,12 +1,19 @@
+<!-- Container for the login status header -->
 <div class="login-status-header">
+    <!-- Conditionally display user information if authenticated and userFullName is available -->
     <div *ngIf="isAuthenticated && userFullName" class="login-status-user-info">
-        Welcome Back {{userFullName}}!
+        Welcome Back {{userFullName}}! <!-- Interpolates the userFullName for display -->
     </div>
+
+    <!-- Display 'Login' button if the user is not authenticated -->
     <button *ngIf="!isAuthenticated" routerLink="/login" class="security-btn">Login</button>
 
-    <button *ngIf="isAuthenticated"  (click)="logout()" class="security-btn">Logout</button>
+    <!-- Display 'Logout' button if the user is authenticated -->
+    <button *ngIf="isAuthenticated" (click)="logout()" class="security-btn">Logout</button>
 
+    <!-- Always displayed, links to the members section -->
     <button routerLink="/members" class="security-btn ml-1">Members</button>
 
+    <!-- Display 'Orders' button if the user is authenticated -->
     <button *ngIf="isAuthenticated" routerLink="/order-history" class="security-btn ml-1">Orders</button>
 </div>

@@ -1,5 +1,5 @@
 import { Product } from "./product";
-
+//entity with some properties
 export class CartItem {
     id:string;
     name:string;
