@@ -135,7 +135,7 @@ for application security we okta platform.
 </figure>
 
 ## FAQ
-- Feel free to ask any questions
+- Feel free to ask me any questions
 
 ## License
 
