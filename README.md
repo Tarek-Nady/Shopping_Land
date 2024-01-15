@@ -5,8 +5,13 @@ On the frontend, we harness the power of Angular 14 and TypeScript to create a d
 for payment we use stripe api.
 for application security we okta platform.
 
-## Technologies
 
+## Technologies
+[![Language](https://img.shields.io/badge/Language-Java-orange)](https://www.java.com/)
+[![Framework](https://img.shields.io/badge/Framework-Spring%20Boot-brightgreen)](https://spring.io/projects/spring-boot)
+[![Frontend](https://img.shields.io/badge/Frontend-Angular-red)](https://angular.io/)
+[![Language](https://img.shields.io/badge/Language-TypeScript-blue)](https://www.typescriptlang.org/)
+[![Database](https://img.shields.io/badge/Database-MySQL-blueviolet)](https://www.mysql.com/)
 - **Backend:** Java 17, Spring Boot 3.2
 - **Database:** MySQL
 - **Frontend:** Angular 14, TypeScript
@@ -128,8 +133,6 @@ for application security we okta platform.
     <br>
     <img src="images/stripe2.png" alt="login" style="width:100%;">
 </figure>
-
-![Language](https://img.shields.io/badge/Language-Java-orange)
 
 ## FAQ
 - Feel free to ask any questions
